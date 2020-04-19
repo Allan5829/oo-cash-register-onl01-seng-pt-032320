@@ -1,3 +1,4 @@
+require 'pry'
 class CashRegister
   
   attr_accessor :total, :items, :last_item_price, :number_of_items, :quantity, :discount
@@ -24,11 +25,12 @@ class CashRegister
   
   def apply_discount
     if @discount == 20
+      #binding.pry
       @total.to_f
       @total = @total * 0.80
       @total = @total.to_i
       puts "After the discount, the total comes to $#{@total}."
-    elsif @discount == nil 
+    else
       puts "There is no discount to apply."
     end 
   end 
