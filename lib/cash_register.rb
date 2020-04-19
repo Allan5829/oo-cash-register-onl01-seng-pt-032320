@@ -25,7 +25,7 @@ class CashRegister
   
   def apply_discount
     if @discount == 20
-      binding.pry
+      #binding.pry
       @total.to_f
       @total = @total * 0.80
       @total = @total.to_i
